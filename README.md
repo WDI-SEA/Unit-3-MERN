@@ -10,7 +10,7 @@ To get started, fork and clone this repository onto your computer, and then in t
 
 ```
 
-git remote add upstream https://github.com/WDI-SEA/Unit-3-React-Express-MongoDB.git
+git remote add upstream https://github.com/WDI-SEA/Unit-3-MERN
 
 ```
 
@@ -18,7 +18,7 @@ When we add new resources to this repository, you can pull the new changes with 
 
 ```
 
-git pull origin upstream 
+git pull upstream main
 
 ```
 
