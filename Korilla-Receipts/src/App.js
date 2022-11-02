@@ -59,7 +59,8 @@ function App() {
     {persons.map((s,i) => 
       <Person 
       key={i}
-      name={s.name}
+      person={s.person}
+      order={s.order}
       />
 
     )}  

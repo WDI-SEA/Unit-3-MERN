@@ -7,19 +7,16 @@ function Person(props) {
 
     return (
       <div>
-       <h3> {props.Person}</h3>
-        <div key={i}>
+       <h3> {props.person}</h3>
           <div>
-          {s.date},
-          {s.main},
-          {s.protien},
-          {s.rice},
-          {s.sauce},
-          {s.drink},
-          {s.cost}
+          {props.order.main},
+          {props.order.protien},
+          {props.order.rice},
+          {props.order.sauce},
+          {props.order.drink},
+          {props.order.cost}
           </div>
-      </div>
       </div>
 );
 }
-export default App;
+export default Person;
