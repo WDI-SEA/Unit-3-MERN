@@ -1,0 +1,10 @@
+.receipt {
+  border: 1px solid coral;
+  padding: 1em;
+  margin: 1em;
+  flex-basis: 30%;
+}
+
+span {
+  color: indigo;
+}

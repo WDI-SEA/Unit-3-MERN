@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+li {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+

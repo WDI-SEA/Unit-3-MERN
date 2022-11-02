@@ -1,0 +1,168 @@
+.nav-bar {
+    padding: 1em;
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    right: 0;
+}
+
+.upper-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+
+.sticky .upper-nav {
+    display: none;
+}
+
+.logo-nav {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/The_logo_simpsons_yellow.svg/1200px-The_logo_simpsons_yellow.svg.png");
+    background-position: center;
+    background-size: contain;
+    padding-top: 10%;
+    background-repeat: no-repeat;
+    flex: 0.5;
+}
+
+.right-upper-nav-wrapper {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.link-socialmedia {
+    padding: 0.5em 2em;
+    cursor: pointer;
+}
+
+.link-socialmedia i {
+    padding: .5em;
+    color: rgba(49,49,49,.4);
+}
+
+.link-socialmedia *:hover {
+    color: orange;
+    transition: 0.5s;
+}
+
+.right-upper-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.cover-contact-about {
+    display: flex;
+    align-items: center;
+}
+
+
+.btn-donate {
+    color: white;
+    background-color: #f7941d;
+    padding: 1em;
+    transition: .2s;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1;
+    font-weight: 700;
+    border: none;
+    margin: 2em 0 2em 2em;
+}
+
+
+
+.lower-nav {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+
+.lower-nav-ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0;
+}
+
+.cover-contact-about li,.lower-nav-ul li {
+    position: relative;
+    padding: 0.5em;
+}
+
+.trigger {
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+}
+
+.trigger:hover {
+    border-color: orange;
+}
+
+.trigger a:hover {
+    color: orange;
+    transition: 0.5s;
+}
+
+li:hover .submenu{
+    display:block;
+}
+
+.submenu {
+    top: calc(100% + 3px);
+    left: 0;
+    display: none;
+    padding: 0;
+    position: absolute;
+    min-width: 100px;
+    width: 100%;
+    z-index: 50;
+}
+
+.submenu li {
+    background-color: white;
+    color: white;
+    padding: 1em;
+}
+
+.submenu li:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.submenu li:hover a {
+    /*background-color: black;*/
+    color: orange;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.submenu a {
+    color: black;
+}
+
+section {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.sticky + section {
+    padding-top: 250px;
+}
