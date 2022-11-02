@@ -14,8 +14,7 @@ What have we learned so far?
 Now let's put that to the test!
 
 ## You Do: Implement Router
-
-Let's go back to our blog project.
+Create a new project with the name blogapp.
 
 You've been told your blog needs to have five pages:
 - Homepage
@@ -24,7 +23,6 @@ You've been told your blog needs to have five pages:
 - Favorite food
 - About page
 
-You already have the "Main blog" page, which renders the `Post` component! One down, four to go.
 
 Task:
 
