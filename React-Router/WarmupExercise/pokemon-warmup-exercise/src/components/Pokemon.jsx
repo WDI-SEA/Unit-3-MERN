@@ -11,6 +11,8 @@ function Pokemon(props) {
         <h2>HP: {props.hp} </h2>
         <img src={props.img} alt={props.name}/>
         <button onClick={props.attack}>Attack!</button>
+
+        <h4>{props.status}</h4>
         
        
     </div>
