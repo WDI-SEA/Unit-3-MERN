@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive&display=swap');
 .App {
   text-align: center;
 }
@@ -35,4 +36,74 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  background-color: #0a192e;
+  color: white;
+}
+
+.form-div {
+  color: black;
+  border-radius: 5px;
+  background-color: #f2f2f253;
+  padding: 20px;
+  width: 30%;
+  display: inline-block;
+}
+
+input,
+label {
+  display: block;
+  padding: 14px 20px;
+  margin: auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+nav {
+  background-color: #0813239a;
+  padding: 15px;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  color: white;
+}
+a:visited {
+  color: #44ae9a;
+}
+.nav-div {
+  display: inline-block;
+  margin-left: 70%;
+}
+/* Profile */
+.n {
+  color: #ccd6f7;
+  font-size: 50px;
+}
+.m {
+  color: #8892b0;
+  font-size: 50px;
+}
+.g {
+  color: #44ae9a;
+  font-family: 'Cutive', serif;
+}
+.profile {
+  margin-left: 30%;
+  text-align: left;
+  line-height: 1;
+}
+/* skills */
+li{
+  list-style-type: none;  
+  display: inline-block;
+  margin: 25px;
+}
+/* about */
+.about{
+  margin:50px;
 }
