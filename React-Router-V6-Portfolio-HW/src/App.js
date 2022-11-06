@@ -48,9 +48,12 @@ function App() {
     po: '855'
   })
 
-  const [user, setUser] = useState({
-
-  })
+  const [user, setUser] = useState([
+    {
+      name: '',
+      password: ''
+    }
+  ])
 
   const [newUser, setNewUser] = useState(
     {
@@ -96,7 +99,11 @@ function App() {
           handleChange={handleChange}
           />}></Route>
 
-          <Route path='/signup' element={<SignUp />}></Route>
+          <Route path='/signup' element={<SignUp
+          addUser={addUser}
+          newUser={newUser}
+          handleChange={handleChange}
+          />}></Route>
 
           <Route path='/profile' element={<Profile
           info={info}

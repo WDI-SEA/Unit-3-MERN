@@ -8,11 +8,11 @@ function Login(props) {
         <form onSubmit={props.addUser}>
         <label>
           <span>Name</span>
-          <input value={props.newUser.name} name='name' onChange={handleChange} />
+          <input value={props.newUser.name} name='name' onChange={props.handleChange} />
         </label>
         <label>
           <span>Password</span>
-          <input value={props.newUser.password} onChange={handleChange} name='password'>
+          <input value={props.newUser.password} onChange={props.handleChange} name='password'>
           </input>
         </label>
 
