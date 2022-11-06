@@ -39,9 +39,9 @@ export default function App() {
       </nav>
 
       <div>
-        <Route exact path="/" component={Home} />
-        <Route path='/procedures' component={() => <Procedures procedures={proceduresArray} />} />
-        <Route path="/contact" component={Contact} />
+        <Route exact path="/" element={<Home />} />
+        <Route path='/procedures' element={<Procedures procedures={proceduresArray}/>} />
+        <Route path="/contact" element={<Contact />} />
       </div>
     </Router>
   );
