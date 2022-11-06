@@ -1,0 +1,20 @@
+<%- include('../partials/headerTweet') %>
+<table id="list">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% tweets.forEach(function(t) { %>
+      <tr>
+        <td><%= t.name %></td>
+        <td><%= t.description %></td>
+        <td><a href="/tweets/<%= t._id %>">DETAILS</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+<%- include('../partials/footer') %>
