@@ -1,3 +1,17 @@
+.live-game-horizontal {
+  width: 600px;
+  height: 620px;
+}
+
+.live-game-vertical {
+  width: 1000px;
+  height: 620px;
+}
+
+
+
+
+
 .App {
   text-align: center;
 }
