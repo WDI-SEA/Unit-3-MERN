@@ -16,8 +16,6 @@ function App() {
       hp2: (state.hp2 - 10),
       status: "Pikachu is attacking Charizard"
     })
-
-    
    }
   
    const handlePikachuAttack = () =>{
@@ -34,7 +32,7 @@ function App() {
      
       <h4>{state.status}</h4>
     </div>
-  );
+  )
 }
 
 export default App;
