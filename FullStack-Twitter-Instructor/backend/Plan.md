@@ -32,11 +32,14 @@ Stories:
 
         <!-- - POST /users ---> createUser  -->
 
-        - POST /users/tweets ---> createUserTweet
+        <!-- - POST /users/tweets ---> createUserTweet -->
 
-        
+
     - As a User, I want to see all the tweets for a particular user
         - GET /users/tweets route ---> getUserTweets
+
+    
+    Implement Update and Delete for Users and Tweets
 
 
 
