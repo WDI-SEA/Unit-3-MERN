@@ -21,7 +21,12 @@ const movieSchema = new Schema({
   },
   mpaaRating: String,
   nowShowing: { type: Boolean, default: false },
-  reviews: [reviewSchema]
+  reviews: [reviewSchema],
+  // adding the association/reference to the Performer table
+  cast: [{
+    type: Schema.Types.ObjectId, 
+    ref: 'Performer'
+  }]
 }, {
   timestamps: true
 });

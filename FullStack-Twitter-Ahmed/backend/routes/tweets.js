@@ -9,7 +9,11 @@ const tweetsController = require('../controllers/tweet')
 // for the the path '/tweets'
 router.get('/tweets', tweetsController.getAllTweets)
 
-
 router.post('/tweets', tweetsController.createTweet)
+
+
+router.put('/tweets/:tweetId/put', tweetsController.updateTweet)
+router.delete('/tweets/:userId/:tweetId/delete', tweetsController.deleteTweet)
+
 
 module.exports = router

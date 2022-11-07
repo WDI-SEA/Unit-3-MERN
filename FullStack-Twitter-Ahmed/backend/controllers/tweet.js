@@ -1,5 +1,6 @@
 const Tweet = require('../models/Tweet')
 const mongoose = require('mongoose')
+const User = require('../models/User')
 
 
 
@@ -46,8 +47,54 @@ const createTweet = async (req, res) => {
 }
 
 
+const updateTweet = async (req, res) => {
+
+
+    let tweet = await Tweet.findOneAndUpdate({
+        _id: req.params.tweetId
+    }, {
+        name: req.body.name,
+        content: req.body.content,
+    })
+
+    res.json({message: 'update tweet'})
+}
+
+
+
+const deleteTweet = async (req, res) => {
+
+
+
+    // delete the tweet
+    const tweet = await Tweet.findOneAndDelete({
+        _id: req.params.tweetId
+    })
+
+    // must also delete the reference
+    const user = await User.findById(req.params.userId)
+    
+    let index =  user.tweets.findIndex(element => element.valueOf() === req.params.tweetId)
+    
+
+    console.log('user ', user)
+    console.log('user id ', user.tweets[index].valueOf())
+    console.log('index ', index)
+
+    // remove that elment
+    user.tweets.splice(index, 1)
+
+    // Save our changed to the user
+    await user.save()
+
+    res.json({message: 'delete tweet'})
+}
+
+
 // Exporting/Sharing our functions
 module.exports = {
     getAllTweets,
-    createTweet
+    createTweet,
+    updateTweet,
+    deleteTweet
 }

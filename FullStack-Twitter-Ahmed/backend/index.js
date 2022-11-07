@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // ....
 app.use('/', require('./routes/tweets'))
+app.use('/', require('./routes/users'))
 
 
 // ....
