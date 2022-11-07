@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/movies', {
+mongoose.connect('mongodb+srv://fatema:fatema@cluster0.facbfbp.mongodb.net/movies', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true
