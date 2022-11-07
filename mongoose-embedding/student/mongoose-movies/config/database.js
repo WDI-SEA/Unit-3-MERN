@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 require('dotenv').config()
 
-mongoose.connect('mongodb+srv://notahmed:4wGisR5BSXHNSqlA@cluster0.qayj98y.mongodb.net/movie',
+mongoose.connect(process.env.DATABASE_URL,
   { useNewUrlParser: true, useCreateIndex: true }
 );
 
