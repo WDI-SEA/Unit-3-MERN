@@ -3,7 +3,12 @@ const Schema = mongoose.Schema;
 
 const performerSchema = new Schema({
   name: {type: String, required: true, unique: true},
-  born: Date
+  born: Date,
+  // movies: [{
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'Movies'
+  // }]
+
 }, {
   timestamps: true
 });

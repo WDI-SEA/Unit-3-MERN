@@ -3,7 +3,8 @@ const Movie = require('../models/movie');
 
 module.exports = {
   new: newPerformer,
-  create
+  create,
+  addToCast
 };
 
 function create(req, res) {
@@ -24,5 +25,20 @@ function newPerformer(req, res) {
       title: 'Add Performer',
       performers
     });
+  })
+}
+
+
+function addToCast(req, res) {
+  //This function will assciate the Performer with a Movie (Tweet& user)
+
+  //we have to find the Moive(user)
+  Movie.findById(req.params.id, function(err, movie) {
+    //we have to push the _id of the Performer (tweet) into the cast proprty
+    movie.cast.push(req.body.performerId)
+    //we have to save our changes
+    movie.save(function(err) {
+      res.redirect(`/movies/${movie._id}`)
+    })
   })
 }
