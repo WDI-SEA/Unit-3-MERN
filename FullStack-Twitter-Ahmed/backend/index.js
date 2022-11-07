@@ -6,10 +6,14 @@ const app = express()
 
 require('./config/database')
 
-// mount our middleware
+// Mount our middleware
+// app.use(express.json());
+// This will allow the form data to be understandable by express
+app.use(express.urlencoded({ extended: false }));
 
 
 // ....
+app.use('/', require('./routes/tweets'))
 
 
 // ....
