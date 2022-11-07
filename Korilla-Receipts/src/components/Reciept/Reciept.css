@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px; 
+    background-color: aliceblue;
+    border: 2px solid darkslateblue;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  
+  ul{
+    list-style: none;
+  }
