@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://notahmed:PrEwSDdGDkeBmUg4@cluster0.qayj98y.mongodb.net/movie',
+require('dotenv').config()
+
+mongoose.connect('mongodb+srv://notahmed:4wGisR5BSXHNSqlA@cluster0.qayj98y.mongodb.net/movie',
   { useNewUrlParser: true, useCreateIndex: true }
 );
 

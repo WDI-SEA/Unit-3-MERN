@@ -2,10 +2,10 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
+require('dotenv').config()
 
 //Connect to our mongo DB
-mongoose.connect('mongodb+srv://notahmed:PrEwSDdGDkeBmUg4@cluster0.qayj98y.mongodb.net/animals')
-
+mongoose.connect(process.env.DATABASE_URL)
 
 
 // Display message when connected
