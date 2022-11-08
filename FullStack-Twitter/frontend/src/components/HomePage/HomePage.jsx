@@ -25,8 +25,6 @@ function HomePage() {
     // STEP 3: Display data in HTML using tweets.map .. .. 
    
    
-   
-   
     // - Form to create tweet -> onChange, onSubmit, store form data in state, API call
     
     

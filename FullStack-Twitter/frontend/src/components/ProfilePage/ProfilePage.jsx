@@ -25,13 +25,44 @@ function ProfilePage() {
       .catch(err => console.log(err))
     }
 
+
+
+
+    const [formData, setFormData] = useState({
+      name: '',
+      username: '',
+      email:'',
+      password:''
+      }
+    )
+
+    const handleChange = (e) => {
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value
+      })
+    }
+    const handleSubmit = (e) => {
+      axios.post('http://localhost:4000/users', formData)
+      .then(res => console.log(res))
+      .then(() => getAllUsers())
+      .catch(err => console.log(err))
+    }
+
   return (
     <div>
       <h1>Admin</h1>
-      <p>list of users with their data, delete user, update user</p>
-      <p>for for creating new user</p>
 
+    {/* Form - 1 Input -> content */}
+      <form onSubmit={handleSubmit}>
+        <label>New User</label><br />
+        <input name="name" value={formData.name} onChange={handleChange} placeholder="Name" /><br />
+        <input name="username" value={formData.username} onChange={handleChange} placeholder="Username" /><br />
+        <input name="email" value={formData.email} onChange={handleChange} placeholder="Email" /><br />
+        <input name="password" value={formData.password} onChange={handleChange} placeholder="Password" /><br />
 
+        <button type="submit">Create user</button>
+      </form>
 
 
 <br /> <br />
@@ -41,6 +72,7 @@ function ProfilePage() {
         <p> Name: {user.name}</p>
         <p> Email: {user.email}</p>
         <p> Username: {user.username}</p>
+         <hr />
        </div>
     )
     : null}
