@@ -7,9 +7,18 @@ Pages:
     - Home Page:
         - Form to create tweet
         - display all tweets below
+
+
+
+        
     - Profile Page:
         - Display user data
         - See all User Tweets (and Edit/Delete buttons)
+        - Create new user
+
+
+
+
     - Edit Page:
         - User and Tweet Edit form
     - Sign up Page:

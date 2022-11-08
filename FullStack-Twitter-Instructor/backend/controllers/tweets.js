@@ -57,9 +57,20 @@ async function deleteTweet(req,res) {
     }
 }
 
+
+async function getTweet(req,res) {
+    try {
+        const tweet = await Tweet.findById(req.params._id)
+        res.json(tweet)
+    } catch (err) {
+        res.json(err)
+    }
+}
+
 // Exporting/Sharing our functions
 module.exports = {
     getAllTweets,
+    getTweet,
     createTweet,
     updateTweet,
     deleteTweet

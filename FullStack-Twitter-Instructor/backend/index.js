@@ -9,8 +9,8 @@ require('./config/database')
 // Mount our middleware
 //....
 app.use(cors())
-// app.use(express.json())
-app.use(express.urlencoded({extended: false}))
+app.use(express.json())
+// app.use(express.urlencoded({extended: false}))
 //....
 app.use('/', require('./routes/tweets'))
 app.use('/', require('./routes/users'))

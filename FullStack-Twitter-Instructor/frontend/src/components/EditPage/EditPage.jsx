@@ -1,6 +1,10 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect } from 'react'
+
 
 function EditPage() {
+
+  
   return (
     <div>EditPage</div>
   )
