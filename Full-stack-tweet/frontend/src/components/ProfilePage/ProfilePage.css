@@ -1,0 +1,35 @@
+.user{
+    border: 1px solid lightblue;
+    margin: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(72, 168, 200)
+
+   
+}
+
+
+.peofileform{
+    background-color: #14171A;
+    border-radius: 12px;
+    margin: 30px;
+    width: 40%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+.input{
+
+    border-radius: 14px;
+    text-align: center;
+}
+  
+  
+.submit{
+      border-radius: 12px;
+      margin-bottom: 20px;
+}
+

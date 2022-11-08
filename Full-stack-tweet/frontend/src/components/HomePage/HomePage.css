@@ -1,0 +1,46 @@
+.tweet{
+    background-color: #14171A;   
+    margin: 30px;
+    width: 60%;
+    height: 40%;
+    border-radius: 12px;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.name{
+    margin-right:  550px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+
+}
+
+.homeform{
+    background-color: #14171A;
+    border-radius: 12px;
+    margin: 30px;
+    width: 60%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+.input{
+
+  border-radius: 14px;
+  text-align: center;
+}
+
+
+.submit{
+    border-radius: 12px;
+    margin-bottom: 20px;
+}

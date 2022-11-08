@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/movies',
+mongoose.connect('mongodb+srv://shaikha:shaikha@cluster0.wdhczfj.mongodb.net/movies',
   { useNewUrlParser: true, useCreateIndex: true }
 );
+
 
 // shortcut to mongoose.connection objec
 const db = mongoose.connection;
