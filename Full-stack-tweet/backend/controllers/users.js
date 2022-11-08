@@ -1,6 +1,11 @@
 const User = require('../models/User')
 const Tweet = require ('../models/Tweet')
 
+async function getAllUsers (req, res){
+    let user = await User.find().populate('tweets')
+    res.json(user)
+}
+
 
 async function createUser(req, res) {
     try {
@@ -74,5 +79,6 @@ module.exports = {
    createUser,
    createUserTweet,
    updateUser,
-   deleteUser
+   deleteUser,
+   getAllUsers
 }

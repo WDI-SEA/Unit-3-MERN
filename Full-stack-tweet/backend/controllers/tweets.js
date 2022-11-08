@@ -4,7 +4,6 @@ const Tweet = require ('../models/Tweet')
 async function  getAllTweets(req, res) {
     const allTweets = await Tweet.find()
     res.json(allTweets)
-
 }
 
 async function createTweet(req,res) {
