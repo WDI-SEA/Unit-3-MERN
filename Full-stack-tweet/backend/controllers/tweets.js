@@ -36,19 +36,33 @@ async function createTweet(req,res) {
 }
 
 
-async function UpdateTweet (req, res) {
-    let updatetweet = await Tweet.findByIdAndUpdate(req.params.tweetId, 
-        {name: req.body.name,
-        content: req.body.content,
-    })
-    
-    res.json(updatetweet)
+async function updateTweet (req, res) {
+    try{
+        let updatetweet = await Tweet.findByIdAndUpdate(req.params._id, req.body
+           //from body  // {content: req.body.content}
+        )
+        // res.status(200).json({message: 'Tweet update successfully'})
+        res.json(updatetweet)
+
+    } catch (err){
+        res.json(err)
+
+    }
 }
 
 
-async function DeleteTweet(req, res){
-    let deleteTweet = await Tweet.findByIdAndDelete(req.params.tweetId)
-    res.json(deleteTweet)
+async function deleteTweet(req, res){
+    try {
+        let deletetweet = await Tweet.findByIdAndDelete(req.params._id)
+
+        // res.json({message: 'Tweet delete successfully'})
+
+        res.json(deletetweet)
+
+    }catch (err){
+        res.json(err)
+
+    }
 
 }
 
@@ -56,6 +70,6 @@ async function DeleteTweet(req, res){
 module.exports = {
    getAllTweets, 
    createTweet,
-   UpdateTweet,
-   DeleteTweet
+   updateTweet,
+   deleteTweet
 }

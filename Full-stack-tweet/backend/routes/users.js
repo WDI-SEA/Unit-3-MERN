@@ -6,9 +6,9 @@ router.post('/users', usersController.createUser)
 
 router.post('/users/:userId/tweets', usersController.createUserTweet)
 
-router.post('/users/:userId/Update', usersController.UpdateUser)
+router.put('/users/:userId', usersController.updateUser)
 
-router.delete('/users/:userId/delete', usersController.DeleteUser)
+router.delete('/users/:userId', usersController.deleteUser)
 
 
 

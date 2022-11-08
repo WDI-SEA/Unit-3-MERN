@@ -10,9 +10,9 @@ router.get('/tweets', tweetsController.getAllTweets)
 
 router.post('/tweets', tweetsController.createTweet)
 
-router.post('/tweets/:tweetId/Update', tweetsController.UpdateTweet)
+router.put('/tweets/:_id', tweetsController.updateTweet)
 
-router.delete('/tweets/:tweetId/delete', tweetsController.DeleteTweet)
+router.delete('/tweets/:id', tweetsController.deleteTweet)
 
 //we export our routes
 module.exports = router
