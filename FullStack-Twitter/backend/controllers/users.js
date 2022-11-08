@@ -46,31 +46,53 @@ async function createUserTweet(req,res){
 }
 
 
-async function updateUser(req,res){
+// async function updateUser(req,res){
 
-    let user = await User.findByIdAndUpdate(req.params.userId,
-        {
-        name: req.body.name,
-        username:req.body.username,
-        email:req.body.email,
-        password:req.body.password
-    } )
+//     let user = await User.findByIdAndUpdate(req.params.userId,
+//         {
+//         name: req.body.name,
+//         username:req.body.username,
+//         email:req.body.email,
+//         password:req.body.password
+//     } )
 
 
-    res.json(user)
+//     res.json(user)
+// }
+
+
+
+// async function deleteUser(req,res){
+
+//     await User.findByIdAndDelete(req.params.userId,
+//        )
+
+
+//     res.json('User has been deleted successfully!')
+// }
+
+
+//update user function
+async function updateUser() {
+    try {
+        let updateUser = await User.findByIdAndUpdate(req.params._id, req.body)
+        res.status(200).json({message: 'User updated successfully'})
+    }
+    catch(err) {
+        res.status(400).json({message: 'User not updated'})
+    }
 }
 
-
-
-async function deleteUser(req,res){
-
-    let user = await User.findByIdAndRemove(req.params.userId,
-       )
-
-
-    res.json(user)
+//delete user function
+async function deleteUser(req,res) {
+    try {
+        let deleteUser = await User.findByIdAndDelete(req.params._id)
+        res.status(200).json({message: 'User deleted successfully'})
+    }
+    catch(err) {
+        res.status(400).json({message: 'User not deleted'})
+    }
 }
-
 
 module.exports = {
     createUser,

@@ -10,8 +10,8 @@ router.get('/tweets',tweetsController.getAllTweets)
 
 router.post('/tweets',tweetsController.createTweet)
 
-router.post('/tweets/:id/update',tweetsController.updateTweet)
-router.delete('/tweets/:id/delete',tweetsController.deleteTweet)
+router.post('/tweets/:_id',tweetsController.updateTweet)
+router.delete('/tweets/:_id',tweetsController.deleteTweet)
 
 
 

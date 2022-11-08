@@ -39,26 +39,59 @@ async function createTweet(req,res){
 }
 
 
-async function updateTweet(req,res){
+// async function updateTweet(req,res){
 
-    let tweet = await Tweet.findByIdAndUpdate(req.params._id,
-        {
-        name: req.body.name,
+//     let tweet = await Tweet.findByIdAndUpdate(req.params._id,
+//         {
+//         name: req.body.name,
         
-        content:req.body.content
-    } )
+//         content:req.body.content
+//     } )
 
 
-    res.json(tweet)
+//     res.json(tweet)
+// }
+
+// async function deleteTweet(req,res){
+
+//     try {
+//         await Tweet.findByIdAndDelete(req.params._Id,
+//             )
+     
+     
+//          res.json('Tweet has been deleted')
+
+//     } catch(err){
+//         res.json(err)
+//     }
+     
+// }
+
+async function updateTweet(req, res) {
+    try {
+    // await Tweet.findOne({ _id: ... })
+    let updatedTweet = await Tweet.findByIdAndUpdate(
+        req.params._id,
+        req.body //form body
+        // {content: req.body.content}
+    )
+        res.status(200).json({message: 'Tweet updated Successfully!'})
+    // res.json(updatedTweet)
+    } catch (err) {
+        res.json(err)
+    }
 }
 
-async function deleteTweet(req,res){
 
-    let tweet = await Tweet.findByIdAndRemove(req.params._Id,
-       )
-
-
-    res.json(tweet)
+async function deleteTweet(req,res) {
+    try {
+        await Tweet.findByIdAndDelete(
+            req.params._id
+        )
+        res.json({message: 'Tweet Deleted Successfully'})
+    } catch (err) {
+        res.json(err)
+    }
 }
 
 // Exporting/Sharing our functions
