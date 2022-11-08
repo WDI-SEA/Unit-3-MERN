@@ -1,0 +1,20 @@
+.tweets{
+    border: 2px solid white;
+    background-color: rgba(240, 248, 255, 0.084);
+    
+    margin: 20px;
+    width: 40%;
+    height: auto;
+    color: white;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+.addT{
+    margin: 20px;
+    background-color: #6577862c;
+    width: 30%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
