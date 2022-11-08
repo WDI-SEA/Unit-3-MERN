@@ -31,7 +31,33 @@ async function createUserTweet(req,res) {
     res.json(user)
 }
 
+
+async function updateUser() {
+    try {
+    let updatedUser = await User.findByIdAndUpdate(
+        req.params._id,
+        req.body
+    )
+    res.json({message: 'User updated Successfully!'})
+    // res.json(updatedUser)
+    } catch (err) {
+        res.json(err)
+    }
+}
+
+async function deleteUser(req, res) {
+    try {
+        await User.findByIdAndDelete(req.params._id)
+        res.json({message: 'User deleted successfully!'})
+    } catch (err) {
+        res.json(err)
+    }
+}
+
+
 module.exports = {
     createUser,
-    createUserTweet
+    createUserTweet,
+    updateUser,
+    deleteUser
 }
