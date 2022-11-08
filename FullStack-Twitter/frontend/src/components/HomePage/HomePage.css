@@ -18,3 +18,23 @@
     padding:2px 2px 8px 2px;
     color:cornsilk
 }
+label {
+    color:darkslateblue;
+    font-weight: bold;
+
+}
+
+input, textarea {
+    background-color: bisque;
+    color:darkslateblue;
+    padding:7px;
+    margin:10px;
+}
+
+.tweetBtn{
+    padding:7px;
+    margin: 15px;
+    background-color: darkslateblue;
+    color:blanchedalmond;
+    font-size: 15px;
+}

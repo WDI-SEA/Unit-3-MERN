@@ -11,6 +11,8 @@ async function getAllUsers(req,res){
     res.json(allUsers)
 }
 
+
+
 async function createUser(req,res){
 
     try {

@@ -64,7 +64,7 @@ function HomePage() {
         value={formData.content}
         onChange={handleChange}
         />
-        <button type="submit">Tweet!</button>
+        <button class="tweetBtn" type="submit">Tweet!</button>
       </form>
 
 

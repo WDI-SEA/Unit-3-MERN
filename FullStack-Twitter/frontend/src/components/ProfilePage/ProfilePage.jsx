@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import './Profile.css'
 
 
 // - Display user data 
@@ -61,7 +62,7 @@ function ProfilePage() {
         <input name="email" value={formData.email} onChange={handleChange} placeholder="Email" /><br />
         <input name="password" value={formData.password} onChange={handleChange} placeholder="Password" /><br />
 
-        <button type="submit">Create user</button>
+        <button class="createBtn" type="submit">Create user</button>
       </form>
 
 
@@ -69,9 +70,17 @@ function ProfilePage() {
     {/* users[].map( .. .. .) */}
     {usersList.length ? usersList.map(user => 
       <div class="user" key={user.userId}>
-        <p> Name: {user.name}</p>
-        <p> Email: {user.email}</p>
-        <p> Username: {user.username}</p>
+        <p class="content"> Name: {user.name}</p>
+        <p class="content"> Email: {user.email}</p>
+        <p class="content"> Username: {user.username}</p>
+     <p class="content">Tweets: </p>
+
+     <button class="editBtn">Edit user</button>
+
+    <button class="deleteBtn">Delete user</button>
+    
+  
+
          <hr />
        </div>
     )
