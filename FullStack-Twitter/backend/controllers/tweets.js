@@ -31,12 +31,17 @@ async function createTweet(req,res) {
 
 //Update Tweet:
 async function updateTweet(req,res){
-    let tweetUpdate = await Tweet.findByIdAndUpdate(req.params.tweetId, {
-        name: req.body.name,
+  try {
+    await Tweet.findByIdAndUpdate(req.params.tweetId, {
         content: req.body.content
     })
 
-    res.json(tweetUpdate)
+    res.status(200).json({message: 'Tweet updated Successfully!'})
+    // res.json(tweetUpdate)
+
+  } catch (error) {
+    res.json(error)
+  }
 }
 
 //Delete Tweet

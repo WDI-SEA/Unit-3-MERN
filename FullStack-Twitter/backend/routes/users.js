@@ -6,8 +6,8 @@ router.post('/users', userController.createUser)
 
 router.post('/users/:userId/tweets', userController.createUserTweet)
 
-router.post('/users/:userId/updateInfo', userController.updateUserInfo)
+router.put('/users/:userId', userController.updateUserInfo)
 
-router.post('/users/:userId/deleteUser', userController.deleteUser)
+router.delete('/users/:userId', userController.deleteUser)
 
 module.exports = router

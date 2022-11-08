@@ -35,12 +35,14 @@ async function createUserTweet(req,res){
 
 //Update User Information:
 async function updateUserInfo(req,res){
-    let updateUser = await User.findByIdAndUpdate(req.params.userId, {
-        name: req.body.name,
-        username: req.body.username,
-        email: req.body.email,
-        password: req.body.password
-    })
+    let updateUser = await User.findByIdAndUpdate(req.params.userId, req.body
+        //Or we can specify them like this:
+        //{ name: req.body.name,
+        // username: req.body.username,
+        // email: req.body.email,
+        // password: req.body.password
+        //}
+    )
 
     res.json(updateUser)
 }
@@ -51,6 +53,10 @@ async function deleteUser(req,res){
 
     res.json(userDelete)
 }
+
+
+
+//Exporting it to the Routes ;)
 module.exports = {
     createUser,
     createUserTweet,
