@@ -18,7 +18,11 @@ async function createTweet(req,res) {
     .catch(err => res.json(err))
     
     // Method 2
+<<<<<<< HEAD
     // let newTweet = await Tweet.create({
+=======
+    // await Tweet.create({
+>>>>>>> 98a2ad1 (Completed Create and Read Tweet Routes)
     //     name: req.body.name,
     //     content: req.body.content
     // })
@@ -30,6 +34,7 @@ async function createTweet(req,res) {
     // await newTweet.save()
 }
 
+<<<<<<< HEAD
 async function updateTweet(req, res) {
     try {
     // await Tweet.findOne({ _id: ... })
@@ -63,6 +68,12 @@ module.exports = {
     createTweet,
     updateTweet,
     deleteTweet
+=======
+// Exporting/Sharing our functions
+module.exports = {
+    getAllTweets,
+    createTweet
+>>>>>>> 98a2ad1 (Completed Create and Read Tweet Routes)
 }
 
 

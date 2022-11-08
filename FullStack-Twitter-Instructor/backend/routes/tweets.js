@@ -8,12 +8,15 @@ router.get('/tweets', tweetsController.getAllTweets)
 
 router.post('/tweets', tweetsController.createTweet)
 
+<<<<<<< HEAD
 router.put('/tweets/:_id', tweetsController.updateTweet)
 
 router.delete('/tweets/:_id', tweetsController.deleteTweet)
 
 
 
+=======
+>>>>>>> 98a2ad1 (Completed Create and Read Tweet Routes)
 // We export our routes 
 module.exports = router
 

@@ -19,7 +19,11 @@
     5. controllers/tweets.js -> get All/get Detail
 
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 048708a (Updated Twitter files)
 6. Introduce a Users Model
     - Associate the User Model with the Tweet Model using referencing 
         <!-- - Create a new file -> models/User.js -->
@@ -43,6 +47,8 @@ Stories:
     Implement Update and Delete for Users and Tweets
 
 
+=======
+>>>>>>> 98a2ad1 (Completed Create and Read Tweet Routes)
 
 
 
