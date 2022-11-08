@@ -20,6 +20,28 @@
 
 
 
+6. Introduce a Users Model
+    - Associate the User Model with the Tweet Model using referencing 
+        <!-- - Create a new file -> models/User.js -->
+        <!-- - Create a new User schema and model -->
+        <!-- - Add tweets property to reference the Tweet model -->
+    <!-- - 1 User has Many Tweets -->
+
+Stories:
+    - As a User, I want to create a new tweet
+        <!-- - Create a User Controller file & User Router file -->
+
+        <!-- - POST /users ---> createUser  -->
+
+        <!-- - POST /users/tweets ---> createUserTweet -->
+
+
+    - As a User, I want to see all the tweets for a particular user
+        - GET /users/tweets route ---> getUserTweets
+
+    
+    Implement Update and Delete for Users and Tweets
+
 
 
 

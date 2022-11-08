@@ -9,8 +9,10 @@ require('./config/database')
 //....
 // app.use(express.json())
 app.use(express.urlencoded({extended: false}))
-app.use('/', require('./routes/tweets'))
+
 //....
+app.use('/', require('./routes/tweets'))
+app.use('/', require('./routes/users'))
 
 // Listening on a port
 app.listen(4000, () => {

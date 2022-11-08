@@ -5,6 +5,7 @@ module.exports = {
   new: newPerformer,
   create,
    addToCast
+
 };
 
 function create(req, res) {
@@ -44,5 +45,6 @@ function addToCast(req, res) {
     movie.save((err) => res.redirect(`/movies/${movie._id}`))
 
   })
+
 
 }
