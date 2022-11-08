@@ -12,8 +12,8 @@ router.get('/tweets', tweetsController.getAllTweets)
 router.post('/tweets', tweetsController.createTweet)
 
 
-router.put('/tweets/:tweetId/put', tweetsController.updateTweet)
-router.delete('/tweets/:userId/:tweetId/delete', tweetsController.deleteTweet)
+router.put('/tweets/:tweetId', tweetsController.updateTweet)
+router.delete('/tweets/:userId/:tweetId', tweetsController.deleteTweet)
 
 
 module.exports = router

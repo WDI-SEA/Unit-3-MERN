@@ -49,30 +49,43 @@ const createUserTweet = async (req, res) => {
 
 const updateUser = async (req, res) => {
 
-    const user = await User.findOneAndUpdate({
-            _id: req.params.userId
-        },{
-            name: req.body.name,
-            username: req.body.username,
-            email: req.body.email,
-            password: req.body.password
-        
-        })
 
+    try {
 
-    res.json({message: user})
+        const user = await User.findByIdAndUpdate(
+                req.params.userId
+            ,{
+                name: req.body.name,
+                username: req.body.username,
+                email: req.body.email,
+                password: req.body.password
+
+                // or req.body
+            })
+    
+    
+        res.json({message: 'user updated successfuly'})
+
+    } catch (err){
+        res.json(err)
+    }
 }
 
 
 
 const deleteUser = async (req, res) => {
 
-    const user = await User.findOneAndDelete({
-        _id: req.params.userId
-    })
+    try {
 
+        const user = await User.findByIdAndDelete(
+            req.params.userId
+        )
+    
+        res.json({message: user})
+    } catch (err) {
+        res.json(err)
+    }
 
-    res.json({message: user})
 }
 
 module.exports = {

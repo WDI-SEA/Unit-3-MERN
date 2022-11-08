@@ -50,14 +50,25 @@ const createTweet = async (req, res) => {
 const updateTweet = async (req, res) => {
 
 
-    let tweet = await Tweet.findOneAndUpdate({
-        _id: req.params.tweetId
-    }, {
-        name: req.body.name,
-        content: req.body.content,
-    })
+    try {
 
-    res.json({message: 'update tweet'})
+        let tweet = await Tweet.findByIdAndUpdate(
+            req.params.tweetId
+        ,{
+            name: req.body.name,
+            content: req.body.content
+    
+            // Or { req.body }
+        })
+    
+        res.status(200).json({message: 'Tweet got updated'})
+
+
+    } catch(err) {
+
+        res.json(err)
+    }
+
 }
 
 
@@ -65,29 +76,37 @@ const updateTweet = async (req, res) => {
 const deleteTweet = async (req, res) => {
 
 
+    try {
 
-    // delete the tweet
-    const tweet = await Tweet.findOneAndDelete({
-        _id: req.params.tweetId
-    })
-
-    // must also delete the reference
-    const user = await User.findById(req.params.userId)
+        // delete the tweet
+        const tweet = await Tweet.findByIdAndDelete(
+            req.params.tweetId
+        )
     
-    let index =  user.tweets.findIndex(element => element.valueOf() === req.params.tweetId)
+        // must also delete the reference
+        const user = await User.findById(req.params.userId)
+        
+        let index =  user.tweets.findIndex(element => element.valueOf() === req.params.tweetId)
+        
     
+        console.log('user ', user)
+        console.log('user id ', user.tweets[index].valueOf())
+        console.log('index ', index)
+    
+        // remove that elment
+        user.tweets.splice(index, 1)
+    
+        // Save our changed to the user
+        await user.save()
+    
+        res.json({message: 'Tweet got deleted'})
 
-    console.log('user ', user)
-    console.log('user id ', user.tweets[index].valueOf())
-    console.log('index ', index)
+    } catch (err) {
 
-    // remove that elment
-    user.tweets.splice(index, 1)
+        res.json(err)
 
-    // Save our changed to the user
-    await user.save()
+    }
 
-    res.json({message: 'delete tweet'})
 }
 
 
