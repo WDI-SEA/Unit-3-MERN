@@ -2,6 +2,12 @@ const User = require('../models/User')
 const Tweet = require('../models/Tweet')
 
 
+async function findAllUsers(req,res){
+    const allUsers = await User.find().populate('tweets')
+    res.json(allUsers)
+}
+
+
 async function createUser(req, res){
     //Or .create(req.body), but form must match the DB
     try {
@@ -61,5 +67,6 @@ module.exports = {
     createUser,
     createUserTweet,
     updateUserInfo,
-    deleteUser
+    deleteUser,
+    findAllUsers
 }
