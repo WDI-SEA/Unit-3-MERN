@@ -1,6 +1,16 @@
 const User = require('../models/User')
 const Tweet = require('../models/Tweet')
 
+
+
+
+async function getAllUsers(req,res){
+    
+    const allUsers = await User.find().populate('tweets')
+
+    res.json(allUsers)
+}
+
 async function createUser(req,res){
 
     try {
@@ -75,7 +85,7 @@ async function createUserTweet(req,res){
 //update user function
 async function updateUser() {
     try {
-        let updateUser = await User.findByIdAndUpdate(req.params._id, req.body)
+         await User.findByIdAndUpdate(req.params.userId, req.body)
         res.status(200).json({message: 'User updated successfully'})
     }
     catch(err) {
@@ -86,7 +96,7 @@ async function updateUser() {
 //delete user function
 async function deleteUser(req,res) {
     try {
-        let deleteUser = await User.findByIdAndDelete(req.params._id)
+         await User.findByIdAndDelete(req.params.userId)
         res.status(200).json({message: 'User deleted successfully'})
     }
     catch(err) {
@@ -98,5 +108,6 @@ module.exports = {
     createUser,
     createUserTweet,
     updateUser,
-    deleteUser
+    deleteUser,
+    getAllUsers
 }

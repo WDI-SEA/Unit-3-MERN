@@ -1,0 +1,20 @@
+.tweet {
+ 
+    width:40%;
+    background-color: rgb(3, 136, 136);
+    text-align: center;
+  
+    margin-left: auto;
+    margin-right: auto;
+}
+.name {
+    padding:2px 2px 2px 5px;
+    text-align: left;
+    color:rgb(227, 155, 171);
+    font-weight: bold;
+}
+.tweetContent {
+ 
+    padding:2px 2px 8px 2px;
+    color:cornsilk
+}

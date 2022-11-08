@@ -1,5 +1,6 @@
 const express = require('express')
 
+const cors=require('cors')
 //Initializing our application
 const app = express()
 
@@ -14,7 +15,8 @@ require('./config/database')
 // ...
 // app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-
+app.use(cors())
+app.use(express.json())
 // ...
 app.use('/',require('./routes/users'))
 app.use('/',require('./routes/tweets'))
