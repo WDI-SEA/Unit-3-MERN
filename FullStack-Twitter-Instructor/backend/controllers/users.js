@@ -55,8 +55,19 @@ async function deleteUser(req, res) {
 }
 
 
+
+async function getAllUsers(req, res) {
+    try {
+        const allUsers = await User.find().populate('tweets')
+        res.json(allUsers)
+    } catch (err) {
+        res.json(err)
+    }
+}
+
 module.exports = {
     createUser,
+    getAllUsers,
     createUserTweet,
     updateUser,
     deleteUser

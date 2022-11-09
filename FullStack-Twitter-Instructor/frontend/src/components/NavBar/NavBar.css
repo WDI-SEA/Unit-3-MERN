@@ -1,0 +1,19 @@
+.navbar-ul {
+    background-color: skyblue;
+    display: flex;
+    height: 40px;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+}
+
+.navbar-ul > li {
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0 30px 0 30px;
+}
+.navbar-ul > li:hover {
+    background-color: grey;
+    border-radius: 5px;
+    padding: 5px;
+}
