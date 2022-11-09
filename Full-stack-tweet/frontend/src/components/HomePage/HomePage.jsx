@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './HomePage.css'
+
 // - Home Page:
 
 function HomePage() {
@@ -42,8 +43,12 @@ function HomePage() {
     }
     const handleSubmit = (e) => {
       // axios.post(Create a tweet)
-      // axios.post('http://localhost:4000/tweets', formData)
-      axios.post('http://localhost:4000/users/636a9128e792d5a57d52d7d3', formData)
+      axios.post('http://localhost:4000/tweets', formData, 
+      {
+        headers:{
+          "Authorization":"Bearer "+ localStorage.getItem("token")
+        }
+      })
       .then(res => console.log(res))
       .then(() => getAllTweets())
       .catch(err => console.log(err))

@@ -13,6 +13,8 @@ router.put('/users/:userId', usersController.updateUser)
 
 router.delete('/users/:userId', usersController.deleteUser)
 
+router.post('/auth/singin', usersController.auth_singin_post)
+
 
 
 module.exports = router

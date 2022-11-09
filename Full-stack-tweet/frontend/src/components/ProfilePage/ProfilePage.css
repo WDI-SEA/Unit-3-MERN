@@ -1,14 +1,20 @@
 .user{
-    border: 1px solid lightblue;
+    background-color: #14171A;   
     margin: 30px;
-    width: 80%;
+    width: 60%;
+    border-radius: 12px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(72, 168, 200)
 
    
 }
 
+
+p, li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+
+}
 
 .peofileform{
     background-color: #14171A;
