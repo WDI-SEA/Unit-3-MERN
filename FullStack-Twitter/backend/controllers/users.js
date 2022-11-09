@@ -59,7 +59,8 @@ const auth_signin_post = async (req,res)=>{
         //JWT --> token
         const payload={
             user: {
-                id:user._id
+                id:user._id,
+                name: user.name
             }
         }
         jwt.sign(

@@ -74,18 +74,19 @@ function App() {
 
   return (
     <Router>
-      <NavBar onLogoutHandler={onLogoutHandler} />
-      <div className="App">
-        <Routes>
-          <Route path='/home' element={isAuth ? <HomePage /> : <Signin login={loginHandler} />} />
-          <Route path='/edit/:userId' element={<EditPage />} />
-          <Route path='/profile' element={<ProfilePage />} />
-          <Route path='*' element={<HomePage />} />
-          <Route path='/signup' element={<Signup register={registerHandler}></Signup>} />
-          <Route path='/signin' element={isAuth ? <HomePage /> : <Signin login={loginHandler}  />} />
-        </Routes>
-      </div>
-    </Router>
+    <NavBar onLogoutHandler={onLogoutHandler} isAuth={isAuth} user={user}/>
+    <div className="App">
+      <Routes>
+        <Route path='/home' element={isAuth ? <HomePage /> : <Signin login={loginHandler}></Signin>} />
+        <Route path='/edit/:userId' element={<EditPage />} />
+        <Route path='/profile' element={<ProfilePage />} />
+        <Route path='*' element={<HomePage />} />
+
+        <Route path="/signup" element={<Signup register={registerHandler}></Signup>}></Route>
+        <Route path="/signin" element={isAuth ? <HomePage></HomePage> : <Signin login={loginHandler}></Signin>}></Route>
+      </Routes>
+    </div>
+  </Router>
   );
 }
 
