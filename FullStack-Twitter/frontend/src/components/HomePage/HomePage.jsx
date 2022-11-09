@@ -43,7 +43,12 @@ function HomePage() {
     }
     const handleSubmit = (e) => {
       // axios.post(Create a tweet)
-      axios.post('http://localhost:4000/tweets', formData)
+      axios.post('http://localhost:4000/tweets', formData, 
+      {
+        headers:{
+          "Authorization":"Bearer "+localStorage.getItem("token")
+        }
+      })
       .then(res => console.log(res))
       .then(() => getAllTweets())
       .catch(err => console.log(err))
@@ -64,7 +69,7 @@ function HomePage() {
         value={formData.content}
         onChange={handleChange}
         />
-        <button class="tweetBtn" type="submit">Tweet!</button>
+        <button className="tweetBtn" type="submit">Tweet!</button>
       </form>
 
 
@@ -72,9 +77,9 @@ function HomePage() {
 
     {/* tweets[].map( .. .. .) */}
     {tweetsList.length ? tweetsList.map(tweet => 
-      <div class="tweet" key={tweet._id}>
-        <p class="name"> {tweet.name}</p>
-        <p class="tweetContent">{tweet.content}</p>
+      <div className="tweet" key={tweet._id}>
+        <p className="name"> {tweet.name}</p>
+        <p className="tweetContent">{tweet.content}</p>
       </div>
     )
     : null}

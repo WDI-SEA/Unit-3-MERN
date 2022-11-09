@@ -2,6 +2,7 @@
 const Tweet = require('../models/Tweet')
 
 
+
 async function getAllTweets(req,res){
     
     const allTweets = await Tweet.find()
@@ -94,10 +95,21 @@ async function deleteTweet(req,res) {
     }
 }
 
+
+async function getTweet(req,res) {
+    try {
+        const tweet = await Tweet.findById(req.params._id)
+        res.json(tweet)
+    } catch (err) {
+        res.json(err)
+    }
+}
+
 // Exporting/Sharing our functions
 module.exports = {
     getAllTweets,
     createTweet,
     updateTweet,
-    deleteTweet
+    deleteTweet,
+    getTweet
 }
