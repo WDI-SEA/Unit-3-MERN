@@ -74,6 +74,13 @@ function ProfilePage() {
         <p class="content"> Email: {user.email}</p>
         <p class="content"> Username: {user.username}</p>
      <p class="content">Tweets: </p>
+     {user.tweets.map(tweet => 
+      <>
+      <li class="content">{tweet.content}</li>
+      </>
+      )}
+     
+
 
      <button class="editBtn">Edit user</button>
 
