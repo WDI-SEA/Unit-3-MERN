@@ -4,6 +4,8 @@ import HomePage from './components/HomePage/HomePage'
 import EditPage from './components/EditPage/EditPage'
 import ProfilePage from './components/ProfilePage/ProfilePage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   return (
     <Router>

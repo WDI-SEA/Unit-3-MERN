@@ -9,11 +9,11 @@ const tweetsController = require('../controllers/tweets')
 const isLoggedIn = require('../helper/isLoggedIn');
 
 // We define the routes and controllers
-router.get('/tweets', isLoggedIn, tweetsController.getAllTweets)
+router.get('/tweets', tweetsController.getAllTweets)
 
 
 // we define the routes and controllers
-router.get('/tweets',tweetsController.getAllTweets)
+// router.get('/tweets',tweetsController.getAllTweets)
 
 router.post('/tweets',tweetsController.createTweet)
 
