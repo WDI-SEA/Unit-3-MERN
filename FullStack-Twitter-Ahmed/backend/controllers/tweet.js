@@ -110,10 +110,31 @@ const deleteTweet = async (req, res) => {
 }
 
 
+const getAllUserTweets = async (req, res) => {
+
+
+    try {
+
+        
+        let user = await User.findById(req.params.userId)
+    
+        await user.populate('tweets')
+    
+        console.log(user)
+    
+        res.json(user)
+
+    } catch (err) {
+        res.json(err)
+    }
+}
+
+
 // Exporting/Sharing our functions
 module.exports = {
     getAllTweets,
     createTweet,
     updateTweet,
-    deleteTweet
+    deleteTweet,
+    getAllUserTweets
 }

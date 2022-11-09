@@ -11,7 +11,7 @@ require('./config/database')
 // Mount our middleware
 app.use(cors())
 
-// app.use(express.json());
+app.use(express.json());
 // This will allow the form data to be understandable by express
 app.use(express.urlencoded({ extended: false }));
 

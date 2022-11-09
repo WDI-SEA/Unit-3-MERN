@@ -22,7 +22,7 @@ function HomePage() {
 
     // STEP 3: Display data in HTML using tweets.map .. ...
 
-    const [tweetsList, setTweetList] = useState([])
+    const [tweetsList, setTweetsList] = useState([])
 
 
 
@@ -36,19 +36,73 @@ function HomePage() {
       // axios(...localhost:/tweets)
       // parsed json data
       axios.get('http://localhost:4000/tweets')
-      .then(res => setTweetList(res.data))
+      .then(res => setTweetsList(res.data))
       .catch(err => console.log(err))
 
 
     }, [])
 
+
+    const getAllTweets = () => {
+      axios.get('http://localhost:4000/tweets')
+      .then(res => setTweetsList(res.data))
+      .catch(err => console.log(err))
+    }
+
+
+    const [formData, setFormData] = useState({
+      name: '',
+      content: ''
+    })
+
+    const handleChange = (e) => {
+      // store the user input into state
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value
+      })
+    }
+
+    const handleSubmit = (e) => {
+      // axios.post(Create a tweet)
+      axios.post('http://localhost:4000/tweets', formData)
+      .then(res => console.log(res))
+      .then(() => getAllTweets())
+      .catch(err => console.log(err))
+    }
+
   return (
     <div>
-      {/* Form - 1 Input -> Content */}
+      
+      {/* Form - 1 Input -> content */}
 
-      {/* tweets[].map(....) */}
+  <form onSubmit={handleSubmit}>
+
+    <label>Whats Happening</label>
+    <br/><br/>
+    <input name="name" value={formData.name} onChange={handleChange}></input>
+    <br />
+    <textarea
+      rows="4"
+      cols="45"
+      placeholder="What's Happening"
+      name="content"
+      value={formData.content}
+      onChange={handleChange}
+      >
+    </textarea>
+
+    <br />
+    <button type='submit'>Tweet!</button>
+  </form>
 
 
+
+
+
+
+
+  {/* tweets[].map( .. .. .) */}
     { tweetsList.length ? tweetsList.map(tweet => 
     
     <div style={{border: '1px solid darkblue', backgroundColor: 'lightblue', margin: '10px', borderRadius: '20px'}}>

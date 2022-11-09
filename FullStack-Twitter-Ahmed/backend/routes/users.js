@@ -10,4 +10,9 @@ router.post('/users/:userId/tweets', UsersController.createUserTweet)
 router.put('/users/:userId', UsersController.updateUser)
 router.delete('/users/:userId', UsersController.deleteUser)
 
+
+router.get('/users/:userId', UsersController.getUser)
+
+router.get('/users', UsersController.getAllUsers)
+
 module.exports = router

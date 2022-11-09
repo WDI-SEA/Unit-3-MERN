@@ -9,6 +9,7 @@ Pages:
 2. Profile Page:
     - Display User Data
     - See All User Data (and Edit/Delete buttons)
+    - Create new user
 3. Edit Page
     - User and Tweet Edit form
 4. Sign Up Page

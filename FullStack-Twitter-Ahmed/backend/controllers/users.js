@@ -88,9 +88,45 @@ const deleteUser = async (req, res) => {
 
 }
 
+
+const getUser = async (req, res) => {
+
+    try {
+
+        const user = await User.findById(
+            req.params.userId
+        )
+    
+
+        await user.populate('tweets')
+
+        res.json(user)
+    } catch (err) {
+        res.json(err)
+    }
+}
+
+
+const getAllUsers = async (req, res) => {
+
+    try {
+
+        const users = await User.find().populate('tweets')
+    
+
+
+        res.json(users)
+    } catch (err) {
+        res.json(err)
+    }
+}
+
+
 module.exports = {
     createUser,
     createUserTweet,
     updateUser,
-    deleteUser
+    deleteUser,
+    getUser,
+    getAllUsers
 }
