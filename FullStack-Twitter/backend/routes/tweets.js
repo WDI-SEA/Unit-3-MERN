@@ -5,6 +5,13 @@ const tweetsController = require('../controllers/tweets')
 // We import our controller functions above
 
 
+// Require isLoggedIn Middleware.
+const isLoggedIn = require("../helper/isLoggedIn");
+
+// We define the routes and controllers
+router.get('/tweets', isLoggedIn, tweetsController.getAllTweets)
+
+
 // we define the routes and controllers
 router.get('/tweets',tweetsController.getAllTweets)
 

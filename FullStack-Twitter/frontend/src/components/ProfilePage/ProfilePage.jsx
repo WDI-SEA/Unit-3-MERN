@@ -69,7 +69,7 @@ function ProfilePage() {
 <br /> <br />
     {/* users[].map( .. .. .) */}
     {usersList.length ? usersList.map(user => 
-      <div class="user" key={user.userId}>
+      <div class="user" key={user._id}>
         <p class="content"> Name: {user.name}</p>
         <p class="content"> Email: {user.email}</p>
         <p class="content"> Username: {user.username}</p>

@@ -10,4 +10,7 @@ router.post('/users/:userId/tweets',usersController.createUserTweet)
 router.put('/users/:userId',usersController.updateUser)
 router.delete('/users/:userId',usersController.deleteUser)
 
+
+router.post('/auth/signin',usersController.auth_signin_post)
+
 module.exports=router
