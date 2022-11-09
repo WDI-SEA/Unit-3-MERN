@@ -71,7 +71,7 @@ function App() {
 
   return (
     <Router>
-      <NavBar onLogoutHandler={onLogoutHandler} isAuth={isAuth}/>
+      <NavBar onLogoutHandler={onLogoutHandler} isAuth={isAuth} user={user}/>
       <div className="App">
         <Routes>
           <Route path='/home' element={isAuth ? <HomePage /> : <Signin login={loginHandler}></Signin>} />
