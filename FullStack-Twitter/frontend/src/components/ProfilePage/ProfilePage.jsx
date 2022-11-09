@@ -22,42 +22,10 @@ function ProfilePage() {
       .catch((err) => console.log(err))
   }
 
-  const [formData, setFormData] = useState({
-    name: '',
-    username: '',
-    email: '',
-    password: ''
-    }
-  )
-
-  const handleChange = (e) => {
-    //Store the user input into state
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
-  const handleSubmit = (e) => {
-    // axios.post(Create a user)
-    axios.post('http://localhost:4000/users', formData)
-    .then(res => console.log(res))
-    .then(() => getAllUsers())
-    .catch(err => console.log(err))
-  }
 
   return (
 
     <div>
-
-      <form onSubmit={handleSubmit} className="users-form">
-        <h3>Create A new User:</h3>
-        <input name="name" value={formData.name} onChange={handleChange} placeholder="Name" />    <br />   
-        <input name="username" value={formData.username} onChange={handleChange} placeholder="Username" /> <br />       
-        <input name="email" value={formData.email} onChange={handleChange} placeholder="Email" />      <br /> 
-        <input name="password" value={formData.password} onChange={handleChange} placeholder="Password" />   <br />    
-        <button type="submit">Add User</button>
-      </form>
 
       <h3>Twitter Users:</h3> 
       {usersList.length ? usersList.map(user => 
