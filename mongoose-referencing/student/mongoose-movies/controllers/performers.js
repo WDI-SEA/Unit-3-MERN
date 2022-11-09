@@ -3,7 +3,8 @@ const Movie = require('../models/movie');
 
 module.exports = {
   new: newPerformer,
-  create
+  create,
+  addToCast
 };
 
 function create(req, res) {
@@ -25,4 +26,21 @@ function newPerformer(req, res) {
       performers
     });
   })
+}
+
+function addToCast(req, res) {
+  // assosiate the performer with a movie
+
+  // find the movie
+  Movie.findById(req.params.id, function(err, movie) {
+
+    // push the id of the performer to the cast property
+    movie.cast.push(req.body.performerId);
+
+    // save changes
+    movie.save(function(err) {
+      res.redirect(`/movies/${movie._id}`);
+    });
+  });
+
 }
