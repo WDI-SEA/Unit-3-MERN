@@ -65,7 +65,13 @@ function HomePage() {
 
     const handleSubmit = (e) => {
       // axios.post(Create a tweet)
-      axios.post('http://localhost:4000/tweets', formData)
+      axios.post('http://localhost:4000/tweets', formData, {
+
+      // pass Authorization in headers with the form to get token
+        headers:{
+          "Authorization": "Bearer " + localStorage.getItem("token")
+        }
+      })
       .then(res => console.log(res))
       .then(() => getAllTweets())
       .catch(err => console.log(err))

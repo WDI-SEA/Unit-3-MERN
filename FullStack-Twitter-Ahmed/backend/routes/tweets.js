@@ -6,10 +6,16 @@ const router = express.Router()
 const tweetsController = require('../controllers/tweet')
 
 
+// require isLoggedIn Middleware
+const isLoggedIn = require('../helper/isLoggedIn')
+
+
 // for the the path '/tweets'
+// isLoggedIn require the authentication
+// router.get('/tweets', isLoggedIn, tweetsController.getAllTweets)
 router.get('/tweets', tweetsController.getAllTweets)
 
-router.post('/tweets', tweetsController.createTweet)
+router.post('/tweets', isLoggedIn, tweetsController.createTweet)
 
 
 router.put('/tweets/:tweetId', tweetsController.updateTweet)

@@ -15,4 +15,6 @@ router.get('/users/:userId', UsersController.getUser)
 
 router.get('/users', UsersController.getAllUsers)
 
+router.post('/auth/signin', UsersController.auth_sign_post)
+
 module.exports = router
