@@ -50,15 +50,15 @@ Command:
 Fix any merge conflicts
 
 ##### Step 3: 
-Create a new branch<br>
+Create a new branch <br>
 
 Command: 
 ```
     git checkout -b <your branch name>
 ```
 ##### Step 4: 
-Work on the feature
-Make changes
+Work on the feature <br>
+Make changes <br> 
 Code
 
 ##### Step 5: 
