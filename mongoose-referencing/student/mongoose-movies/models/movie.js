@@ -9,6 +9,11 @@ const reviewSchema = new Schema({
 });
 
 const movieSchema = new Schema({
+  // for the manyToMany relation
+  cast: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Performer'
+  }],
   title: {
     type: String,
     required: true

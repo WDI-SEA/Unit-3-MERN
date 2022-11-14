@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Spectral:500,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,600i');
+
+a {
+margin: 20px 30px 0px 0px;
+font-family: "Spectral", serif;
+color: blue;
+}
+
+.live-game-horizontal {
+  width: 600px;
+  height: 620px;
+}
+
+.live-game-vertical {
+  width: 1000px;
+  height: 620px;
+}
+
+
+
+
+
 .App {
   text-align: center;
 }

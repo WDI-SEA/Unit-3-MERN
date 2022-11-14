@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/movies',
+mongoose.connect('mongodb+srv://layla:layla@cluster0.qdzafht.mongodb.net/movies',
   { useNewUrlParser: true, useCreateIndex: true }
 );
 
