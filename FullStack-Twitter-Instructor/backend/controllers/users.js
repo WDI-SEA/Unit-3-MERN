@@ -109,6 +109,7 @@ async function deleteUser(req, res) {
 }
 
 
+
 async function getAllUsers(req, res) {
     try {
         const allUsers = await User.find().populate('tweets')

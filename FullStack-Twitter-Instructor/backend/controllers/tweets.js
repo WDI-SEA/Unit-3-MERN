@@ -18,7 +18,11 @@ async function createTweet(req,res) {
     .catch(err => res.json(err))
     
     // Method 2
+
+    // await Tweet.create({
+
     // let newTweet = await Tweet.create({
+
     //     name: req.body.name,
     //     content: req.body.content
     // })
@@ -29,6 +33,7 @@ async function createTweet(req,res) {
     // )
     // await newTweet.save()
 }
+
 
 async function updateTweet(req, res) {
     try {
@@ -56,6 +61,15 @@ async function deleteTweet(req,res) {
         res.json(err)
     }
 }
+
+
+// Exporting/Sharing our functions
+module.exports = {
+    getAllTweets,
+    createTweet,
+    updateTweet,
+    deleteTweet
+
 
 
 async function getTweet(req,res) {

@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-image: url('https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png');
+  color: white;
+}
+
+.navbar > a {
+  text-decoration: none;
+  color: rgb(200, 225, 248);
+}

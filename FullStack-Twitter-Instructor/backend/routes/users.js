@@ -8,6 +8,7 @@ router.get('/users', usersController.getAllUsers)
 
 router.post('/users/:userId/tweets', usersController.createUserTweet)
 
+
 router.put('/users/:_id', usersController.updateUser)
 
 router.delete('/users/:_id', usersController.deleteUser)
