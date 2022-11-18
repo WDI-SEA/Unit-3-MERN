@@ -1,0 +1,50 @@
+.user {
+ 
+    width:40%;
+    background-color: rgb(182, 215, 215);
+    text-align: center;
+  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+ 
+    padding:10px 2px 8px 2px;
+    color:rgb(13, 67, 111)
+}
+
+.deleteBtn{
+    padding:7px;
+    margin: 15px;
+    background-color: crimson;
+    font-size: 15px;
+}
+
+.editBtn{
+    padding:7px;
+    margin: 15px;
+    background-color: rgb(151, 182, 215);
+    font-size: 15px;
+}
+
+.createBtn{
+    padding:7px;
+    margin: 15px;
+    background-color: darkslateblue;
+    color:blanchedalmond;
+    font-size: 15px;
+}
+
+label {
+    color:darkslateblue;
+    font-weight: bold;
+
+}
+
+input {
+    background-color: bisque;
+    color:darkslateblue;
+    padding:7px;
+    margin:10px;
+}

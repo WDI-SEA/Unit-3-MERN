@@ -33,6 +33,6 @@ function create(req, res) {
   movie.save(function(err) {
     if (err) return res.redirect('/movies/new');
     console.log(movie);
-    res.redirect('/movies');
+    res.redirect(`/movies/${movie_id}`);
   });
 }

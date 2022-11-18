@@ -1,0 +1,40 @@
+.tweet {
+ 
+    width:40%;
+    background-color: rgb(3, 136, 136);
+    text-align: center;
+  
+    margin-left: auto;
+    margin-right: auto;
+}
+.name {
+    padding:2px 2px 2px 5px;
+    text-align: left;
+    color:rgb(227, 155, 171);
+    font-weight: bold;
+}
+.tweetContent {
+ 
+    padding:2px 2px 8px 2px;
+    color:cornsilk
+}
+label {
+    color:darkslateblue;
+    font-weight: bold;
+
+}
+
+input, textarea {
+    background-color: bisque;
+    color:darkslateblue;
+    padding:7px;
+    margin:10px;
+}
+
+.tweetBtn{
+    padding:7px;
+    margin: 15px;
+    background-color: darkslateblue;
+    color:blanchedalmond;
+    font-size: 15px;
+}

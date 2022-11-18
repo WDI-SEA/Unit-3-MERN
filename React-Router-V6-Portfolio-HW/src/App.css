@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 .App-logo {
@@ -35,4 +36,58 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+form {
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  
+}
+
+h1 {
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color:crimson;
+}
+
+nav {
+  width: 100%;
+  height: 40px;
+  background-color:crimson;
+  overflow: auto;
+}
+
+.navbar {
+  float: left;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 10%; /* Four equal-width links. If you have two links, use 50%, and 33.33% fhree links, etc.. */
+  text-align: center; /* If you want the text to be centered */
+}
+
+.navbar:hover {
+  background-color: rgb(116, 92, 151);
+}
+
+
+.info {
+  float: left;
+  background:  rgb(225, 209, 244);
+  color: rgb(116, 92, 151);
+ 
+  font-size: 16px;
+  width: 100%; /* Four equal-width links. If you have two links, use 50%, and 33.33% fhree links, etc.. */
+  text-align: center; /* If you want the text to be centered */
+
+}
+
+.info li {
+  background:  rgb(239, 230, 250);
+  list-style-type: none;
+  color:  rgb(116, 92, 151);
+  margin: 5px;
+  padding: 5px;
+ 
 }
